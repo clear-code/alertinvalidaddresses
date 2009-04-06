@@ -1,0 +1,6 @@
+content	alertinvalidaddresses	jar:chrome/alertinvalidaddresses.jar!/content/alertinvalidaddresses/
+
+overlay	chrome://messenger/content/messengercompose/messengercompose.xul	chrome://alertinvalidaddresses/content/globalOverlay.xul
+
+locale	alertinvalidaddresses	en-US	jar:chrome/alertinvalidaddresses.jar!/locale/en-US/alertinvalidaddresses/
+locale	alertinvalidaddresses	ja	jar:chrome/alertinvalidaddresses.jar!/locale/ja/alertinvalidaddresses/
