@@ -54,6 +54,10 @@ window.addEventListener('DOMContentLoaded', function() {
 		);
 	}
 
+	function isValidAddress(address) {
+		return /.@./.test(address) || address === "postmaster";
+	}
+
 	window.AddressesValidator.findInvalidEmailAddress = function(aAddresses) {
 		var parser = Components.classes['@mozilla.org/messenger/headerparser;1']
 				.getService(Components.interfaces.nsIMsgHeaderParser);
@@ -67,13 +71,7 @@ window.addEventListener('DOMContentLoaded', function() {
 		for (var i = 0; i < count; i++)
 		{
 			address = addresses.value[i];
-			if (
-				address.length > 0 &&
-				(
-					address.indexOf('@') <= 0 ||
-					address.indexOf('@') == address.length - 1
-				)
-				)
+			if (address.length > 0 && !isValidAddress(address))
 				return full.value[i];
 		}
 
