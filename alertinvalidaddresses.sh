@@ -1,4 +1,4 @@
-gi#!/bin/sh
+#!/bin/sh
 
 appname=${0##*/}
 appname=${appname%.sh}
