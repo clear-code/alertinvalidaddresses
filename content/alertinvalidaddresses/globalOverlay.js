@@ -43,13 +43,12 @@ window.addEventListener('DOMContentLoaded', function() {
 	if ('CheckValidEmailAddress' in window) {
 		eval('window.CheckValidEmailAddress = '+
 			window.CheckValidEmailAddress.toSource().replace(
-				'if (invalidStr) {',
-				<><![CDATA[
-					invalidStr = invalidStr ||
-						window.AddressesValidator.findInvalidEmailAddress(to) ||
-						window.AddressesValidator.findInvalidEmailAddress(cc) ||
-						window.AddressesValidator.findInvalidEmailAddress(bcc);
-				$&]]></>
+				/if\s*\(invalidStr\)\s*{/,
+				'	invalidStr = invalidStr ||\n' +
+				'		window.AddressesValidator.findInvalidEmailAddress(to) ||\n' +
+				'		window.AddressesValidator.findInvalidEmailAddress(cc) ||\n' +
+				'		window.AddressesValidator.findInvalidEmailAddress(bcc);\n' +
+				'$&'
 			)
 		);
 	}
