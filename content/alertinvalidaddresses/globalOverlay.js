@@ -14,7 +14,7 @@
  * The Original Code is "Patch to Alert Invalid Addresses".
  *
  * The Initial Developer of the Original Code is ClearCode Inc.
- * Portions created by the Initial Developer are Copyright (C) 2008
+ * Portions created by the Initial Developer are Copyright (C) 2008-2013
  * the Initial Developer. All Rights Reserved.
  *
  * Contributor(s): ClearCode Inc. <info@clear-code.com>
@@ -45,9 +45,9 @@ window.addEventListener('DOMContentLoaded', function() {
 			window.CheckValidEmailAddress.toSource().replace(
 				/if\s*\(invalidStr\)\s*{/,
 				'	invalidStr = invalidStr ||\n' +
-				'		window.AddressesValidator.findInvalidEmailAddress(to) ||\n' +
-				'		window.AddressesValidator.findInvalidEmailAddress(cc) ||\n' +
-				'		window.AddressesValidator.findInvalidEmailAddress(bcc);\n' +
+				'		window.AddressesValidator.findInvalidEmailAddress(aMsgCompFields ? aMsgCompFields.to : to) ||\n' +
+				'		window.AddressesValidator.findInvalidEmailAddress(aMsgCompFields ? aMsgCompFields.cc : cc) ||\n' +
+				'		window.AddressesValidator.findInvalidEmailAddress(aMsgCompFields ? aMsgCompFields.bcc : bcc);\n' +
 				'$&'
 			)
 		);
