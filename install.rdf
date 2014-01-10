@@ -5,7 +5,7 @@
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="alertinvalidaddresses@clear-code.com"
                    em:name="Patch to Alert Invalid Addresses"
-                   em:version="0.4"
+                   em:version="1.0"
                    em:description="Shows alert if there is any invalid address in sending message."
                    em:creator="ClearCode Inc."
                    em:homepageURL="http://www.clear-code.com/">
@@ -14,8 +14,8 @@
                    em:iconURL="chrome://alertinvalidaddresses/content/icon.png"
 -->
 
-    <em:updateURL>http://www.clear-code.com/update.rdf</em:updateURL>
-    <em:updateKey>MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN4ESXDa0ljqzSDoGs9yy82aR+8tPBIPT8O3FwvXleCB815eOCIKH4lT7L7nK9LKOzdrP5EwiqfugyM+SEXSikbgi+UEfM04HqAomXWUqc7tvXb1kmqx2VwLHxm1tiKuulv1HgHmJtYOh09Tv3+q6VOGX2SDcNe6dgnhnAIP4kYwIDAQAB</em:updateKey>
+    <!--em:updateURL></em:updateURL-->
+    <!--em:updateKey></em:updateKey-->
 
 
     <em:localized>
