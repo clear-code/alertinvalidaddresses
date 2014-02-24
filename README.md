@@ -1,0 +1,1 @@
+Thunderbird warns if first destination address is invalid, but does not warn for further destination addresses. This add-on fixes this odd behavior and make Thunderbird check all destination addresses.
